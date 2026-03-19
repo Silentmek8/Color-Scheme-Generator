@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Color Scheme Generator</title>
+  </head>
+  <body>
+    <h1>Color Scheme generator</h1>
+    <input type="color" id="seedColor" value="#ff0000" />
+
+    <select id="modeSelect">
+      <option value="monochrome">Monochrome</option>
+      <option value="complement">Complement</option>
+      <option value="analogic">Analogic</option>
+      <option value="triad">Triad</option>
+      <option value="quad">Quad</option>
+    </select>
+    <button id="fetchBtn">Get color scheme</button>
+
+    <div id="colorsContainer"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
