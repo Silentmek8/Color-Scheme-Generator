@@ -7,19 +7,48 @@
     <title>Color Scheme Generator</title>
   </head>
   <body>
-    <h1>Color Scheme generator</h1>
-    <input type="color" id="seedColor" value="#ff0000" />
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Creative palette tool</p>
+        <h1>Color Scheme Generator</h1>
+        <p class="hero-copy">
+          Pick a seed color and generate a polished palette for your next UI,
+          brand, or illustration.
+        </p>
+      </section>
 
-    <select id="modeSelect">
-      <option value="monochrome">Monochrome</option>
-      <option value="complement">Complement</option>
-      <option value="analogic">Analogic</option>
-      <option value="triad">Triad</option>
-      <option value="quad">Quad</option>
-    </select>
-    <button id="fetchBtn">Get color scheme</button>
+      <section class="control-panel">
+        <label class="control color-picker" for="seedColor">
+          <span>Seed color</span>
+          <input type="color" id="seedColor" value="#ff0000" />
+        </label>
 
-    <div id="colorsContainer"></div>
+        <label class="control" for="modeSelect">
+          <span>Scheme mode</span>
+          <select id="modeSelect">
+            <option value="monochrome">Monochrome</option>
+            <option value="complement">Complement</option>
+            <option value="analogic">Analogic</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+          </select>
+        </label>
+
+        <button id="fetchBtn">Generate Palette</button>
+      </section>
+
+      <section class="palette-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Generated result</p>
+            <h2>Palette Preview</h2>
+          </div>
+          <p class="section-note">Five balanced shades ready to use</p>
+        </div>
+
+        <div id="colorsContainer" aria-live="polite"></div>
+      </section>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
