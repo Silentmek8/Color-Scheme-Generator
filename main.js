@@ -14,8 +14,13 @@ document
     data.colors.forEach(function (color) {
       const hex = color.hex.value;
       const div = document.createElement("div");
+      const label = document.createElement("span");
+
       div.style.backgroundColor = hex;
-      div.textContent = hex;
+      label.textContent = hex;
+      div.appendChild(label);
       container.appendChild(div);
     });
   });
+
+document.getElementById("fetchBtn").click();
